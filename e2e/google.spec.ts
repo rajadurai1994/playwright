@@ -5,9 +5,9 @@ test('google page open', async ({ page }) => {
     await expect(page.locator(`#logo`)).toBeVisible
 });
 
-test('search rea is visible', async ({ page }) => {
+test('search area is visible', async ({ page }) => {
     await page.goto('https://www.google.com');
-    await expect(page.locator(`textarea`)).toBeHidden
+    await expect(page.locator(`textarea`)).toHaveText('xyz')
 });
 
 test('search button is present', async ({ page }) => {
